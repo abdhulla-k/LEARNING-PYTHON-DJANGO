@@ -54,7 +54,8 @@ ROOT_URLCONF = 'sample.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, 'templates'],               # add your folder to this list. here, I am going to add the folder 'templates' to this list
+                                                       # before , create index.html in that templates folder
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
