@@ -7,6 +7,23 @@ from django.http import HttpResponse
 
 # go to main projuct and add this app (myapp) to urls.py of the main project
 
+# how to add external data or add data from 'templates'
+#def index(request):
+   # return render(request, 'index.html')
 
+
+# how to send dinamic data .the data may coming from data base
+#def index(request):
+#   name = 'Patric'
+#   return render(request, 'index.html',{'name':name})
+#   # go to the templates file and add the key
+
+# add more data. just like above
 def index(request):
-    return render(request, 'index.html')
+   content ={
+      'name' : 'Abdhu',
+      'age' : 20,
+      'place' : 'Kerala',
+      'nationality' : 'India'
+   }
+   return render(request, 'index.html', content)
