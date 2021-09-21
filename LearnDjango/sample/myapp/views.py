@@ -29,6 +29,6 @@ def index(request):
    return render(request, 'index.html', content)
 
 def counter(request):
-   text = request.GET['text']
+   text = request.POST['text']  # learned about GET and POST methods. POST is more safe
    amount_of_words = len(text.split())
    return render(request, 'counter.html', {'amount': amount_of_words}) # go and create the html file
