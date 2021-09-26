@@ -1,0 +1,5 @@
+h1{
+    color: rebeccapurple;     /* after the createion of this directory and file, we want to set the path of this 
+                                   directory  in settings.py and iport os in that file. then go to 'index.html' and link 
+                                   the 'style.css' on the top of the file */
+}
