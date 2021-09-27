@@ -31,25 +31,29 @@ def index(request):
    feature1.id = 0
    feature1.name = 'Fast'
    feature1.details = 'Our service is very quick'
+   feature1.is_currect = True
 
    feature2 = Features()
    feature2.id = 0
    feature2.name = 'Reliable'
-   feature2.details = 'Our service is very quick'
+   feature2.details = 'Our service is Reliable'
+   feature2.is_currect = True
 
    feature3 = Features()
    feature3.id = 0
    feature3.name = 'Easy to use'
-   feature3.details = 'Our service is very quick'
+   feature3.details = 'Our service is very Easy to use'
+   feature3.details = False
 
    feature4 = Features()
    feature4.id = 0
    feature4.name = 'Affordable'
-   feature4.details = 'Our service is very quick'
+   feature4.details = 'Our service is affordable for everyone'
+   feature4.is_currect = False
 
-   #features = [feature1, feature2, feature3, feature4]
+   features = [feature1, feature2, feature3, feature4] # to be dynamic
 
-   return render(request, 'index.html',{'feature1': feature1, 'feature2':feature2, 'feature3':feature3, 'feature4':feature4})
+   return render(request, 'index.html',{'features':features})
 
 
 def counter(request):
