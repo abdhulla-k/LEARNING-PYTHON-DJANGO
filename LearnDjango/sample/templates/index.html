@@ -9,17 +9,46 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <h1>How are you doing today?</h1> -->
-    <!-- You can write enything here -->
-    <h1>
-        Hello {{name}}.<!-- Enter key here like this -->
-        <br>You are {{age}} years old.<br> You are from {{place}}
-
-    <!--  going to create a word counter. so need a texta area and a submit button -->
-    <h1>Enter your text below: </h1>
-    <form method="POST" action="counter">
-        {% csrf_token %}           <!-- the line is becouse of the method POST -->
-        <textarea name="text"rows = "30" cols="100"></textarea><br>
-        <input type="submit">
-    </form>
+    <div>
+       <!-- <h1>How are you doing today?</h1> -->
+       <!-- You can write enything here -->
+       <h1>
+           Hello {{name}}.<!-- Enter key here like this -->
+           <br>You are {{age}} years old.<br> You are from {{place}}
+   
+       <!--  going to create a word counter. so need a texta area and a submit button -->
+       <h1>Enter your text below: </h1>
+       <form method="POST" action="counter">
+           {% csrf_token %}           <!-- the line is becouse of the method POST -->
+           <textarea name="text"rows = "30" cols="100"></textarea><br>
+           <input type="submit">
+       </form>
+    </div>
+    <section>
+        <div>
+            <hr>
+            <h1>{{feature1.name}}</h1>
+            <h2>{{feature1.details}}</h2>
+            <hr> 
+        </div>
+        <div>
+            <hr>
+            <h1>{{feature2.name}}</h1>
+            <h2>{{feature2.details}}</h2>
+            <hr> 
+        </div>
+        <div>
+            <hr>
+            <h1>{{feature3.name}}</h1>
+            <h2>{{feature3.details}}</h2>
+            <hr> 
+        </div>
+        <div>
+            <hr>
+            <h1>{{feature4.name}}</h1>
+            <h2>{{feature4.details}}</h2>
+            <hr> 
+        </div>
+    </section>
+</body>
 </html>
