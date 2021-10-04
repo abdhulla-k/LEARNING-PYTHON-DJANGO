@@ -10,5 +10,6 @@ urlpatterns = [
                                                    # index is a function from views.py
     path('counter', views.counter, name='counter'),
     path('register', views.register, name='register'),
-    path('login', views.Login, name='login')
+    path('login', views.Login, name='login'),
+    path('logout', views.logout, name='logout')
 ]
