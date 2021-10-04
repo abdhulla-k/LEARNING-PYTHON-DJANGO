@@ -15,9 +15,15 @@
        <h1>
            Hello {{name}}.<!-- Enter key here like this -->
            <br>You are {{age}} years old.<br> You are from {{place}}
+       </h1>
    
        <!--  going to create a word counter. so need a texta area and a submit button -->
-       <h1>Enter your text below: </h1>
+       {% if user.is_authenticated %}
+       <h2>Welcome, {{user.username}}</h2>
+       {% else %}
+       <h2>Welcome, Please login</h2>
+       {% endif %}
+       <h2>Enter your text below: </h2>
        <form method="POST" action="counter">
            {% csrf_token %}           <!-- the line is becouse of the method POST -->
            <textarea name="text"rows = "30" cols="100"></textarea><br>
@@ -59,9 +65,15 @@
             {% else %}
             <p>This is False</p>
             <hr> 
-            {% endif%}
+            {% endif %}
         </div>
         {% endfor %} <!-- must end the loop like this. beouse it is an html file. -->
+        <ul>{% if user.is_authenticated %}
+            <li><a href="logout">Logout</a></li>
+            {% else %}
+            <li><a href="login">Login or sign up</a></li>
+            {% endif %}
+        </ul>
     </section>
 </body>
 </html>
