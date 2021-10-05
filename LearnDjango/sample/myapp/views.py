@@ -112,3 +112,7 @@ def counter(request):
 
 def post(request, pk):
    return render(request, 'post.html', {'pk': pk})
+
+def Post(request):
+   posts = [1,2,3,4,5,'tim','tom','jon']
+   return render(request, 'Post.html', {'posts': posts})
