@@ -12,6 +12,6 @@ urlpatterns = [
     path('register', views.register, name='register'),
     path('login', views.Login, name='login'),
     path('logout', views.logout, name='logout'),
-    path('post/<str:pk>', views.post, name='post'),
-    path('Post', views.Post, name = 'Post')
+    path('post/<str:pk>', views.post, name='post'),# this url linked with "post.html" and it created for an example of url routing
+    path('Post', views.Post, name = 'Post')  # this url linked with "Post.html" and it created for an example of url routing
 ]

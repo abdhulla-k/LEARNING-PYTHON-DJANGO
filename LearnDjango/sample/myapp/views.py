@@ -110,9 +110,11 @@ def counter(request):
    amount_of_words = len(text.split())
    return render(request, 'counter.html', {'amount': amount_of_words}) # go and create the html file
 
-def post(request, pk):
+def post(request, pk):         # It is created linked with 'post.html' and it is created for represcent an example of
+   # url routing
    return render(request, 'post.html', {'pk': pk})
 
 def Post(request):
-   posts = [1,2,3,4,5,'tim','tom','jon']
+   posts = [1,2,3,4,5,'tim','tom','jon']# It is created linked with 'Post.html' and it is created for represcent an 
+   # example of url routing
    return render(request, 'Post.html', {'posts': posts})
