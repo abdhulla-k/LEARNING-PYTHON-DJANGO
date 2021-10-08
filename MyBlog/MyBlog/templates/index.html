@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>MyBlog</h1>
+    <header>
+        <div class="header" style="text-align: center; padding: 20px;">
+            <h1>Abdhu's Blog</h1>
+        </div>
+    </header>
+    <section>
+        {% for post in posts %}
+        <div>
+            <hr>
+            <h2>{{post.title}}</h2>
+            <h3>{{post.created_at}}</h3>
+            <p>{{post.body}}</p>
+            <hr>
+        </div>
+        {% endfor %}
+    </section>
 </body>
 </html>
